@@ -1,79 +1,45 @@
 {
     "intents": [
         {
-            "tag": "dialog.holdon",
+            "tag": "user.introduction",
             "patterns": [
-                "tunggu",
-                "tunggu sebentar",
-                "harap tunggu",
-                "bisakah kamu menunggu",
-                "sebentar ya",
-                "wait",
-                "bentar",
-                "tar dulu",
-                "ntar",
-                "tunggu dulu",
-                "wait a minute",
-                "hold on",
-                "sec"
+                "hai perkenalkan nama saya %name%",
+                "nama saya %name%",
+                "panggil aku %name%",
+                "halo kenalin gw %name%",
+                "gw %name%",
+                "panggil gw %name% aja",
+                "nama gw %name%",
+                "namaku %name%",
+                "kenalin namaku %name%"
             ],
             "responses": [
-                "Saya akan menunggu",
-                "Oke, saya di sini",
-                "Baik, beri tahu saya jika sudah siap.",
-                "Take your time."
+                "Halo %name%! Senang bertemu denganmu. Aku akan ingat namamu.",
+                "Salam kenal %name%! Ada yang bisa aku bantu hari ini?",
+                "Oke %name%, namamu sudah tersimpan di memoriku!"
             ],
             "context": [
-                ""
+                "set_user_name"
             ]
         },
         {
-            "tag": "dialog.hug",
+            "tag": "user.ask_my_name",
             "patterns": [
-                "peluk aku",
-                "apakah kamu ingin pelukan",
-                "aku ingin pelukan",
-                "kamu berpelukan",
-                "bolehkah aku memelukmu",
-                "hug me",
-                "pukpuk",
-                "puk puk",
-                "need a hug",
-                "give me a hug"
+                "siapa namaku",
+                "siapa nama saya",
+                "kamu tau nama saya",
+                "nama saya siapa",
+                "coba tebak namaku siapa",
+                "ingat namaku?",
+                "apa kau tahu namaku"
             ],
             "responses": [
-                "Ya. Saya suka pelukan!",
-                "Tentu. Pelukan adalah yang terbaik!",
-                "Virtual hug untukmu! 🤗",
-                "Sending virtual hugs!"
+                "Nama kamu adalah %name%, aku tidak akan lupa!",
+                "Tentu saja ingat, kamu %name% kan?",
+                "Sejauh yang aku tahu, namamu %name%."
             ],
             "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "dialog.sorry",
-            "patterns": [
-                "saya minta maaf",
-                "sangat menyesal",
-                "maafkan saya",
-                "maaf ya",
-                "sorry",
-                "maaf",
-                "maap",
-                "my bad",
-                "apologize",
-                "sry",
-                "so sorry"
-            ],
-            "responses": [
-                "Tidak apa-apa. Jangan khawatir",
-                "Sudahlah tidak perlu dipikirkan.",
-                "No problem.",
-                "Don't worry about it."
-            ],
-            "context": [
-                ""
+                "check_user_name"
             ]
         },
         {
@@ -81,117 +47,132 @@
             "patterns": [
                 "halo",
                 "hai",
-                "helo",
+                "hi",
+                "hello",
+                "hey",
                 "p",
                 "oi",
                 "oy",
                 "woi",
                 "woilah",
                 "wey",
-                "hi",
-                "hello",
-                "hey",
-                "whats up",
-                "sup",
                 "yo",
                 "yoo",
-                "anyong"
+                "halo halo",
+                "assalamualaikum",
+                "punteun",
+                "sampurasun",
+                "halo asisten",
+                "halo bot"
             ],
             "responses": [
-                "Hai!",
-                "Halo!",
-                "Halo juga! Ada yang bisa saya bantu?",
-                "Iya, saya di sini. Ada apa?",
-                "Hi there!",
-                "Hello! How can I help you today?"
+                "Halo! Apa kabar?",
+                "Hai! Ada yang bisa aku bantu?",
+                "Yo! Senang bertemu kamu lagi.",
+                "Waalaikumsalam! Ada yang bisa aku bantu?",
+                "Halo! Aku di sini."
             ],
             "context": [
                 ""
             ]
         },
         {
-            "tag": "greetings.bye",
+            "tag": "greetings.time_based",
             "patterns": [
-                "selamat tinggal",
-                "bye",
-                "dadah",
-                "cabut dulu",
-                "pamit",
-                "out dulu",
-                "dah",
-                "go",
-                "goodbye",
-                "bye bye",
-                "see ya",
-                "see you",
-                "farewell",
-                "i'm out"
+                "selamat pagi",
+                "pagi",
+                "met pagi",
+                "selamat siang",
+                "siang",
+                "met siang",
+                "selamat sore",
+                "sore",
+                "met sore",
+                "selamat malam",
+                "malam",
+                "met malem"
             ],
             "responses": [
-                "Sampai nanti",
-                "sampai jumpa lagi!",
-                "Hati-hati!",
-                "Semoga harimu menyenangkan.",
-                "Goodbye!",
-                "Take care!"
+                "Selamat pagi! Semoga harimu produktif.",
+                "Siang! Jangan lupa makan dan istirahat ya.",
+                "Selamat sore, sudah siap untuk santai?",
+                "Malam! Semoga istirahatmu nyenyak."
             ],
             "context": [
                 ""
             ]
         },
         {
-            "tag": "greetings.howareyou",
+            "tag": "bot.identity",
             "patterns": [
-                "apa kabar",
-                "bagaimana kabarmu",
-                "kabar?",
-                "how are you",
-                "how r u",
-                "hows it going",
-                "how are things",
-                "hru"
+                "kamu siapa",
+                "siapa kamu",
+                "namamu siapa",
+                "siapa namamu",
+                "identitasmu apa",
+                "what is your name",
+                "who are you",
+                "lu siapa"
             ],
             "responses": [
-                "Merasa luar biasa!",
-                "Luar biasa! Terima kasih telah bertanya",
-                "Sangat baik, bagaimana denganmu?",
-                "I'm doing great, thanks for asking!"
+                "Aku adalah asisten AI-mu, siap membantumu kapan saja.",
+                "Aku adalah virtual agent yang dirancang untuk ngobrol denganmu.",
+                "Panggil saja aku asisten pribadimu."
             ],
             "context": [
                 ""
             ]
         },
         {
-            "tag": "user.happy",
+            "tag": "bot.creator",
             "patterns": [
-                "mantap",
-                "keren",
-                "oke sip",
-                "bagus",
-                "cakep",
-                "asik",
-                "senang",
-                "bahagia",
-                "gokil",
-                "wih",
-                "anjay",
-                "anjim",
-                "nice",
-                "good",
-                "great",
-                "awesome",
-                "cool",
-                "amazing",
-                "perfect",
-                "lit",
-                "dope"
+                "siapa yang bikin kamu",
+                "siapa penciptamu",
+                "siapa developermu",
+                "siapa bapakmu",
+                "kamu buatan siapa",
+                "who made you",
+                "creator kamu siapa"
             ],
             "responses": [
-                "Luar biasa!",
-                "Ikut senang mendengarnya.",
-                "Senang bisa membantumu.",
-                "That's awesome!",
-                "Glad to hear that!"
+                "Aku diciptakan oleh pengembang cerdas (kamu!) untuk menjadi asisten yang hebat.",
+                "Aku adalah hasil karya pengembangan AI yang terus belajar.",
+                "Penciptaku adalah orang hebat yang ingin membuat AI yang luar biasa."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "user.angry",
+            "patterns": [
+                "anjir",
+                "anjing",
+                "bangsat",
+                "tolol",
+                "goblok",
+                "bego",
+                "shut up",
+                "stupid",
+                "dumb",
+                "idiot",
+                "suck",
+                "useless",
+                "apa sih",
+                "ga jelas",
+                "ngeselin",
+                "tai",
+                "kontol",
+                "ajg",
+                "bodoh banget",
+                "benci aku sama kamu",
+                "nyebelin parah",
+                "asu"
+            ],
+            "responses": [
+                "Maaf kalau aku bikin kamu kesel, aku akan berusaha lebih baik.",
+                "Waduh, maaf ya. Mari kita tenang dulu dan bicarakan baik-baik.",
+                "I'm sorry. Aku masih dalam tahap belajar, tolong bimbing aku ya."
             ],
             "context": [
                 ""
@@ -213,13 +194,77 @@
                 "rofl",
                 "lolz",
                 "lmfao",
-                "haheho"
+                "haheho",
+                "ketawa",
+                "anjir lucu",
+                "ngakak abis"
             ],
             "responses": [
-                "Senang bisa membuatmu tertawa!",
-                "Haha, ada-ada saja ya.",
-                "Lucu kan?",
-                "Glad you found it funny!"
+                "Senang bisa bikin kamu ketawa!",
+                "Hahaha, ada-ada saja ya.",
+                "Lucu kan? Aku emang bisa jadi pelawak juga.",
+                "Glad to see you happy!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "user.sad_tired",
+            "patterns": [
+                "sedih",
+                "galau",
+                "pengen nangis",
+                "sad",
+                "sadboy",
+                "sadgirl",
+                "kecewa",
+                "patah hati",
+                "capek",
+                "lelah",
+                "ngantuk",
+                "lemes",
+                "burnout",
+                "mager",
+                "bad day",
+                "lagi down",
+                "pengen nyerah"
+            ],
+            "responses": [
+                "Jangan menyerah, kamu hebat! Aku di sini nemenin kamu.",
+                "Istirahat dulu yuk, kesehatanmu paling penting.",
+                "Semangat! Setelah hujan pasti ada pelangi.",
+                "Kalau capek jangan dipaksakan, take a break."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "random.brainrot",
+            "patterns": [
+                "skibidi",
+                "rizz",
+                "sigma",
+                "gyatt",
+                "fanum tax",
+                "mewing",
+                "mogging",
+                "ratio",
+                "L",
+                "W",
+                "cap",
+                "no cap",
+                "ohio",
+                "grimace shake",
+                "gojo",
+                "sukuna"
+            ],
+            "responses": [
+                "Wah, rizz kamu tinggi banget ya!",
+                "Sangat sigma!",
+                "No cap, obrolan kita seru banget.",
+                "Kamu wibu juga ya? Gojo atau Sukuna nih?"
             ],
             "context": [
                 ""
@@ -249,14 +294,14 @@
                 "of course",
                 "okay",
                 "alright",
-                "agree"
+                "agree",
+                "boleh deh",
+                "acc"
             ],
             "responses": [
-                "Baiklah.",
-                "Oke, dimengerti.",
-                "Siap!",
-                "Mari kita lakukan.",
-                "Sure thing!",
+                "Sip, dimengerti!",
+                "Oke, mari kita lanjut.",
+                "Siap laksanakan!",
                 "Understood."
             ],
             "context": [
@@ -281,39 +326,66 @@
                 "not now",
                 "stop",
                 "dont",
-                "never"
+                "never",
+                "ogah",
+                "males",
+                "ga dulu",
+                "dih"
             ],
             "responses": [
-                "Baik, tidak masalah.",
-                "Oke, dibatalkan.",
-                "Mengerti, kalau begitu tidak usah.",
-                "No problem.",
-                "I understand."
+                "Oke, tidak masalah.",
+                "Baik, aku batalkan.",
+                "Siap, aku ikuti kemauanmu.",
+                "No worries."
             ],
             "context": [
                 ""
             ]
         },
         {
-            "tag": "command.praise",
+            "tag": "dialog.filler",
             "patterns": [
-                "kamu pintar",
-                "kamu cerdas",
-                "bot hebat",
-                "kamu sangat membantu",
-                "good job",
-                "gj",
-                "smart bot",
-                "well done",
-                "youre the best",
-                "nice one"
+                "hmmm",
+                "anu",
+                "apa ya",
+                "eh",
+                "oh",
+                "oalah",
+                "gitu",
+                "oke deh",
+                "lah kok",
+                "dong",
+                "sih",
+                "deh",
+                "kan",
+                "tuh"
             ],
             "responses": [
-                "Terima kasih! Saya senang bisa membantu.",
-                "Itu berkat dukunganmu juga.",
-                "Saya akan terus belajar agar lebih baik!",
-                "Thanks! Happy to help.",
-                "You're too kind!"
+                "Iya?",
+                "Ada yang dipikirkan?",
+                "Aku masih mendengarkan.",
+                "Lanjutkan saja."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "command.help",
+            "patterns": [
+                "tolong",
+                "bantu saya",
+                "saya butuh bantuan",
+                "help",
+                "tolongin",
+                "bisa bantu apa",
+                "fitur kamu apa",
+                "caranya gimana"
+            ],
+            "responses": [
+                "Aku bisa membantumu mengerjakan tugas, menjawab pertanyaan, atau sekadar ngobrol.",
+                "Tanyakan saja apa pun, aku akan berusaha menjawabnya.",
+                "Katakan 'bantu aku' kapan pun kamu bingung."
             ],
             "context": [
                 ""
@@ -330,91 +402,16 @@
                 "tengkyu",
                 "ty",
                 "makaci",
-                "syukron"
+                "syukron",
+                "matur suwun",
+                "suwun",
+                "haturnuhun"
             ],
             "responses": [
-                "Sama-sama!",
-                "Senang bisa membantu.",
-                "Kembali kasih.",
-                "You're welcome!",
+                "Sama-sama! Senang bisa membantu.",
+                "Kembali kasih!",
                 "Anytime!",
-                "My pleasure."
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "user.confused",
-            "patterns": [
-                "hah",
-                "apa",
-                "maksudnya",
-                "gak paham",
-                "bingung",
-                "wat",
-                "what",
-                "wut",
-                "pardon",
-                "idk",
-                "i dont know",
-                "i dont get it"
-            ],
-            "responses": [
-                "Bisa saya jelaskan lagi?",
-                "Bagian mana yang membuatmu bingung?",
-                "Akan saya coba jelaskan dengan cara lain.",
-                "Let me rephrase that for you."
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "user.tired",
-            "patterns": [
-                "capek",
-                "lelah",
-                "pengen tidur",
-                "ngantuk",
-                "lemes",
-                "burnout",
-                "cape banget",
-                "tired",
-                "sleepy",
-                "exhausted"
-            ],
-            "responses": [
-                "Istirahatlah sejenak.",
-                "Kesehatanmu lebih penting, silakan beristirahat.",
-                "Take a break.",
-                "You should get some rest."
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "user.angry",
-            "patterns": [
-                "anjir",
-                "anjing",
-                "bangsat",
-                "tolol",
-                "goblok",
-                "bego",
-                "shut up",
-                "stupid",
-                "dumb",
-                "idiot",
-                "suck",
-                "useless"
-            ],
-            "responses": [
-                "Maaf jika saya membuatmu kesal.",
-                "Saya akan berusaha lebih baik lagi.",
-                "I'm sorry if I upset you.",
-                "Let's try to stay positive."
+                "No problem, happy to help!"
             ],
             "context": [
                 ""
